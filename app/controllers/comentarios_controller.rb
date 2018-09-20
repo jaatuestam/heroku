@@ -1,6 +1,6 @@
 class ComentariosController < ApplicationController
-#  before_action :set_comentario, only: [:show, :edit, :update, :destroy]
-skip_before_action :verify_authenticity_token
+# before_action :set_comentario, only: [:show, :edit, :update, :destroy]
+  skip_before_action :verify_authenticity_token
 
   # GET /comentarios
   # GET /comentarios.json
@@ -70,6 +70,6 @@ skip_before_action :verify_authenticity_token
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def comentario_params
-      params.require(:comentario).permit(:comentario, :autor, :curso_id)
+      params.require(:comentario).permit(:texto, :autor, :curso_id)
     end
 end
