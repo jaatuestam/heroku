@@ -1,5 +1,6 @@
 class ComentariosController < ApplicationController
-  before_action :set_comentario, only: [:show, :edit, :update, :destroy]
+#  before_action :set_comentario, only: [:show, :edit, :update, :destroy]
+skip_before_action :verify_authenticity_token
 
   # GET /comentarios
   # GET /comentarios.json
