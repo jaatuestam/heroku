@@ -55,6 +55,7 @@ class ComentariosController < ApplicationController
   # DELETE /comentarios/1
   # DELETE /comentarios/1.json
   def destroy
+    @comentario = Comentario.find(params[:id])
     @comentario.destroy
     respond_to do |format|
       format.html { redirect_to comentarios_url, notice: 'Comentario was successfully destroyed.' }
